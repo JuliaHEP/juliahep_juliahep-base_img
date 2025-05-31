@@ -17,10 +17,21 @@ networked and size-limited personal directories.
 The [hep-base](environments/hep-base/Project.toml) Julia environment defines
 the set of preinstalled packages.
 
-This container image sets
+Users can use
+
+```
+pkg> activate @hep-base
+```
+
+to activate the `hep-base` environment, which contains all preinstalled
+packages, but is a read-only part of the container image (no additional
+packages can be added to it).
+
+However, users can also create their own Julia environments and still take
+advantage of the preinstalled packages: This container image sets
 [`JULIA_PKG_PRESERVE_TIERED_INSTALLED=true`](https://pkgdocs.julialang.org/v1/api/#Pkg.add).
 So installation of additional packages should automatically use the
 pre-installed dependencies as much as possible, instead of installing
 the lastest version of each dependency.
 
-This image builds on top of `registry.cern.ch/juliahep/juliahep-core`.
+This image is built on top of `registry.cern.ch/juliahep/juliahep-core`.
