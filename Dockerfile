@@ -5,7 +5,9 @@ FROM registry.cern.ch/juliahep/juliahep-core:latest
 COPY provisioning/install-julia-packages.sh provisioning/
 COPY environments/hep-base/*.toml environments/hep-base/
 
-ENV JULIA_PKG_PRESERVE_TIERED_INSTALLED="true"
+ENV \
+    JULIA_CPU_TARGET="generic;sandybridge,-xsaveopt,clone_all;haswell,-rdrnd,base(1);x86-64-v4,-rdrnd,base(1)" \
+    JULIA_PKG_PRESERVE_TIERED_INSTALLED="true"
 
 RUN true \
     && provisioning/install-julia-packages.sh julia-1.11 environments/hep-base \
