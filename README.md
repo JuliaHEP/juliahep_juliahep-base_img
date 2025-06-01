@@ -1,6 +1,7 @@
 # JuliaHEP base container image
 
-Container build specification for `registry.cern.ch/juliahep/juliahep-base`.
+Container build specification for
+[`registry.cern.ch/juliahep/juliahep-base`](https://registry.cern.ch/harbor/projects/3833/repositories/juliahep-base/).
 
 This container image is part of the [JuliaHEP](https://www.juliahep.org/)
 effort. It contains pretty much all depencencies that Julia HEP
@@ -14,7 +15,7 @@ which sit near the top of the depencency tree, does not require large disk
 space or a very large number of files, and so is easily possible also on
 networked and size-limited personal directories.
 
-The [hep-base](environments/hep-base/Project.toml) Julia environment defines
+The [`hep-base`](environments/hep-base/Project.toml) Julia environment defines
 the set of preinstalled packages.
 
 Users can use
@@ -34,4 +35,5 @@ So installation of additional packages should automatically use the
 pre-installed dependencies as much as possible, instead of installing
 the lastest version of each dependency.
 
-This image is built on top of `registry.cern.ch/juliahep/juliahep-core`.
+This image is built on top of
+[`registry.cern.ch/juliahep/juliahep-core`](https://github.com/JuliaHEP/juliahep_juliahep-core_img).
