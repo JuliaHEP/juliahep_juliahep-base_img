@@ -28,7 +28,7 @@ mkdir -p "${JULIA_PROJECT}"
 cp -a "$JL_REF_ENV"/*.toml "${JULIA_PROJECT}"/
 chown -R root:root "${JULIA_PROJECT}"
 
-"${JL_EXE}" -e 'import Pkg; Pkg.instantiate()'
+"${JL_EXE}" -e 'import Pkg; Pkg.instantiate(verbose=true)'
 
 unset JULIA_PROJECT
 export JULIA_PROJECT=$(dirname `"${JL_EXE}" -e 'import Pkg; println(Pkg.project().path)'`)
