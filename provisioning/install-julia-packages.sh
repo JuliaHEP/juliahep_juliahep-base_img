@@ -36,3 +36,9 @@ mkdir -p "${JULIA_PROJECT}"
 "${JL_EXE}" -e 'import Pkg; Pkg.add(["Revise", "IJulia", "Pluto"]); Pkg.build("IJulia")'
 rm "${JL_LOCAL_DIR}/logs/manifest_usage.toml"
 chmod -R go+rX  "${JL_LOCAL_DIR}"
+
+# Revise precompilation result stores path "/opt/julia-VERSION/share/julia",
+# and Revise complains if containers image is unpacked to a different path
+# and Julia run directly, e.g. from CVMFS. So remove Revise precompilation
+# from image:
+rm -rf "$JL_LOCAL_DIR"/compiled/*/Revise
