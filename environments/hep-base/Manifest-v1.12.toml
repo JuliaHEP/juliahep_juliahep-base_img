@@ -2,7 +2,7 @@
 
 julia_version = "1.12.0-beta3"
 manifest_format = "2.0"
-project_hash = "79b079d075c8c10cfd4d756b595f2fa4ecd4c625"
+project_hash = "8e59c338faaaac30a0e1f337cb307ea0a19ea71b"
 
 [[deps.ADTypes]]
 git-tree-sha1 = "e2478490447631aedba0823d4d7a80b2cc8cdb32"
@@ -2325,11 +2325,14 @@ deps = ["CodeTracking", "InteractiveUtils", "JuliaInterpreter", "JuliaSyntax", "
 git-tree-sha1 = "c5bc131290ca461230634d6a44a69f3c9a8d8577"
 uuid = "c3a54625-cd67-489e-a8e7-0a5a0ff4e31b"
 version = "0.9.19"
-weakdeps = ["Cthulhu", "Revise"]
 
     [deps.JET.extensions]
     JETCthulhuExt = "Cthulhu"
     JETReviseExt = "Revise"
+
+    [deps.JET.weakdeps]
+    Cthulhu = "f68482b8-f384-11e8-15f7-abe071a5a75f"
+    Revise = "295af30f-e4ad-537b-8983-00126c2a3abe"
 
 [[deps.JLD2]]
 deps = ["FileIO", "MacroTools", "Mmap", "OrderedCollections", "PrecompileTools", "Requires", "TranscodingStreams"]
@@ -4437,16 +4440,6 @@ deps = ["ChainRulesCore", "DiffResults", "DiffRules", "ForwardDiff", "FunctionWr
 git-tree-sha1 = "3ab8eee3620451b09f0272c271875b4bc02146d9"
 uuid = "37e2e3b7-166d-5795-8a7a-e32c996b4267"
 version = "1.16.1"
-
-[[deps.Revise]]
-deps = ["CodeTracking", "FileWatching", "JuliaInterpreter", "LibGit2", "LoweredCodeUtils", "OrderedCollections", "REPL", "Requires", "UUIDs", "Unicode"]
-git-tree-sha1 = "4e58145c98094ab2405b8fca034e21bde6c06c1c"
-uuid = "295af30f-e4ad-537b-8983-00126c2a3abe"
-version = "3.7.5"
-weakdeps = ["Distributed"]
-
-    [deps.Revise.extensions]
-    DistributedExt = "Distributed"
 
 [[deps.Richardson]]
 deps = ["LinearAlgebra"]
