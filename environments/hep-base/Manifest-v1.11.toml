@@ -2,7 +2,7 @@
 
 julia_version = "1.11.5"
 manifest_format = "2.0"
-project_hash = "abed350e322b8ede3da701b5813848395750dbfe"
+project_hash = "a8f2bc7c161c63ab9086c1f3a27eb7b7f0e14c4d"
 
 [[deps.ADTypes]]
 git-tree-sha1 = "e2478490447631aedba0823d4d7a80b2cc8cdb32"
@@ -5311,12 +5311,6 @@ deps = ["ColorTypes", "Dates", "Downloads", "FFMPEG", "FFMPEG_jll", "FileIO", "G
 git-tree-sha1 = "4b1cbd724eda8ea7316a3379b0b36c5116d67ed9"
 uuid = "d6d074c3-1acf-5d4c-9a43-ef38773959a2"
 version = "1.1.1"
-
-[[deps.WGLMakie]]
-deps = ["Bonito", "Colors", "FileIO", "FreeTypeAbstraction", "GeometryBasics", "Hyperscript", "LinearAlgebra", "Makie", "Observables", "PNGFiles", "PrecompileTools", "RelocatableFolders", "ShaderAbstractions", "StaticArrays"]
-git-tree-sha1 = "b9a685c3f2ca91ad68a80a81b1dd848d320bcf6c"
-uuid = "276b4fcb-3e11-5398-bf8b-a0c2d153d008"
-version = "0.11.8"
 
 [[deps.Wayland_jll]]
 deps = ["Artifacts", "EpollShim_jll", "Expat_jll", "JLLWrappers", "Libdl", "Libffi_jll", "XML2_jll"]
