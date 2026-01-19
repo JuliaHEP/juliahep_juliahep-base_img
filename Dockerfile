@@ -12,8 +12,7 @@ ENV \
 RUN true \
     && echo "export JULIA_CPU_TARGET=\"$JULIA_CPU_TARGET\"" >> /unpacked/env.sh \
     && echo "export JULIA_PKG_PRESERVE_TIERED_INSTALLED=\"$JULIA_PKG_PRESERVE_TIERED_INSTALLED\"" >> /unpacked/env.sh \
-    && provisioning/install-julia-packages.sh julia-1.11 environments/hep-base \
-    && provisioning/install-julia-packages.sh julia-1.12 environments/hep-base \
+    && provisioning/install-julia-packages.sh julia environments/hep-base \
     true
 
 # Set unpacked image name:
